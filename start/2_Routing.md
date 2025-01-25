@@ -34,18 +34,22 @@
     <li><NuxtLink to="/account/245662">account page with params</NuxtLink></li>
     ```
 * prefecthing (powered by `NuxtLink`)
-    The current page is downloaded, and any linked pages are prefetched and available when needed
+    * The problem: Traditional `SPA` bundles every single page into one large file.
+    * Solution : `NuxtLink` enables code splitting and prefetching.
+      * Code splitting: Only the JavaScript for the current page is downloaded initially.
+      * Prefetching : Prefetching the JavaScript code for pages linked to the current page. 
 
 * custom links
     * custom link is created as a component in the components directory
     * formart:
+    `./components/CustomLink.ts`
     ```js
     export default defineNuxtLink({
-    componentName: 'CustomLink',
-    externalRelAttribute: '',
-    activeClass: 'custom-active',
-    exactActiveClass: 'custom-exact-active',
-    prefetchedClass: 'prefetch-class'
+        componentName: 'CustomLink',
+        externalRelAttribute: '',
+        activeClass: 'custom-active',
+        exactActiveClass: 'custom-exact-active',
+        prefetchedClass: 'prefetch-class'
     })
     ```
 * 
