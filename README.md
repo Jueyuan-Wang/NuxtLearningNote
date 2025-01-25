@@ -33,7 +33,11 @@ Here are the lessons and resources I’ve used:
 
 ## 🚀 Usage
 
-Feel free to browse the notes and examples. If you're also learning Nuxt.js, you might find these helpful! 😊
+Feel free to browse the notes and examples. As a beginner, I can’t guarantee that my thoughts are always correct or follow best practices.
+Don’t hesitate to point out any mistakes or inappropriate coding styles.
+If you’re also learning Nuxt.js, you might find these helpful! 😊
+
+
 
 ---
 
