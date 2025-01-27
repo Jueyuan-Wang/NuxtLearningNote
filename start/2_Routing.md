@@ -52,4 +52,40 @@
         prefetchedClass: 'prefetch-class'
     })
     ```
-* 
+
+## Route
+* Route object
+    Nuxt router is based on the Vue.js router package.
+    ```js
+    <script setup>
+    //retrieves a route object
+    const route = useRoute();
+    </script>
+    <template>
+        //loop over all properties in route
+        <div v-for="value in {route}" :key="value">
+        <pre>{{value}}</pre>
+    </div>
+    </template>
+
+    ```
+* Route Middleware
+    * A piece of code that we want to execute before navigating to a particular route.
+    ```js
+    // middleware/adminGuard.js
+    export default defineNuxtRouteMiddleware((to, from) => {
+        if (to.path === "/admin") {
+            return navigateTo("/");
+        }
+    });
+    // pages/admin.vue
+    <script setup>
+    definePageMeta({
+        middleware: "admin-guard","second-middleware",
+    });
+    </script>
+    ```
+    * global middleware
+    ```text
+    middleware/adminGuard.js -> middleware/adminGuard.global.js
+    ```
